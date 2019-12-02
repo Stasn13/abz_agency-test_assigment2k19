@@ -1,0 +1,37 @@
+@import "variables.scss";
+
+#requirements{
+    background: url(../images/third-block-bg/third-block-bg-1024x755.jpg) #0e1a74 center no-repeat;
+    background-size: cover;
+    .container{
+        color: #fff;
+        h2{
+            padding: 130px 0 44px;
+            margin: 0 auto;
+            text-align: center
+        }
+        .requirements-block{
+            display: flex;
+            padding-bottom: 133px;
+            justify-content: space-between;
+            .requirements-text{
+                max-width: 448px;
+                p{
+                    margin-bottom: 22px;
+                    line-height: 1.5;
+                    font-size: 15px;
+                    color: #fefefe;
+                    &:last-child{
+                        margin-bottom: 0
+                    }
+                }
+            }
+            .requirements-icon{
+                background: url(../images/man-laptop-v1.svg) center no-repeat;
+                width: 429px;
+                height: 361px;
+                margin-top: 14px
+            }
+        }
+    }
+}

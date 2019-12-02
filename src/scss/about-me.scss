@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+#about-me{
+    .container{
+        padding: 0 45px;
+        h2{
+            text-align: center;
+            padding: 130px 0 27px;
+        }
+        .about-block{
+            display: flex;
+            justify-content: space-between;
+            .about-icon{
+                background: url(../images/man-mobile.svg) center no-repeat;
+                background-size: cover;
+                width: 289px;
+                height: 285px;
+                margin-left: 3px
+            }
+            .about-text{
+                max-width: 612px;
+                h3{
+                    margin: 18px 0 11px;
+                }
+                p{
+                    font-size: 15px;
+                    line-height: 21px;
+                    color: $sub-texts;
+                }
+                .first-paragraph{
+                    margin-bottom: 25px;
+                }
+                .second-paragraph{
+                    margin-bottom: 24px
+                }
+                a{
+                    color: $primary;
+                    font-size: 19px;
+                    font-weight: bold;
+                    transition: .1s;
+                    &:hover{
+                        color: $primary-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    //MEDIA-queries
+    @include tablet{
+        .container{
+            padding: 0 16px;
+            h2{
+                padding: 108px 0 50px
+            }
+            .about-block{
+                .about-icon{
+                    width: 219px;
+                    height: 216px;
+                }
+            }
+        }
+    }
+}

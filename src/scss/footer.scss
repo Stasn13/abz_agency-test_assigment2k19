@@ -1,0 +1,165 @@
+@import "variables.scss";
+
+#footer{
+    background-color: $secondary;
+    color: #fff;
+    .container{
+        .top-footer{
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            .logo{
+                a{
+                    display: block;
+                    cursor: pointer;
+                    div{
+                        width: 134px;
+                        height: 24px;
+                        svg{
+                            path{
+                                fill: #fff
+                            }
+                        }
+                    }
+                }
+            }
+            nav{
+                display: flex;
+                align-items: center;
+                li{
+                    margin-left: 23px;
+                }
+                &:last-child{
+                    margin-left: 0;
+                }
+            }
+        }
+        .divider{
+            height: 1px;
+            border: solid 1px #5674b9;
+            background-color: #5f5fc4;
+            margin: 0 -48px;
+        }
+        .main-footer{
+            padding-top: 30px;
+            padding-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            .contacts-block{
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        margin-bottom: 14px;
+                        &:last-child{
+                            margin: 0
+                        }
+                        div{
+                            display: inline
+                        }
+                        .phone{
+                            margin-left: 2px;
+                        }
+                        .cellphone{
+                            margin-left: 4px;
+                        }
+                        a, span{
+                            display: inline-block;
+                            font-size: 20px;
+                            margin-left: 10px;
+                            margin-bottom: 3px;
+                            letter-spacing: -1.5px
+                        }
+                        a{
+                            letter-spacing: -0.5px
+                        }
+                    }
+                }
+            }
+            .links-block{
+                display: flex;
+                margin-top: -2px;
+                .footer-links{
+                    text-align: right;
+                    margin-left: 81px;
+                    a{
+                        margin-bottom: 12px
+                    }
+                    &:last-child{
+                        margin-bottom: 0
+                    }
+                }
+            }
+        }
+        .bottom-footer{
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            padding-bottom: 30px;
+            .copyright{
+                margin-top: 12px;
+                letter-spacing: -0.5px
+            }
+            .social-block{
+                display: flex;
+                a{
+                    margin-left: 22px
+                }
+                &:first-child{
+                    margin: 0;
+                }
+            }
+        }
+    }
+    a{
+        cursor: pointer;
+        color: #fff;
+        display: block
+    }
+
+    //MEDIA-queries
+    @include tablet{
+        .container{  
+            padding: 0 15px;
+            
+            .top-footer{
+                margin-right: 2px;
+                padding: 30px 8px;
+            }
+            .divider{
+                margin: 0 -15px;
+            }
+            .main-footer{
+                .contacts-block{
+                    ul{
+                        li{
+                            margin-bottom: 20px;
+                            div{
+                                display: none
+                            }
+                            a,span{
+                                font-size: 18px
+                            }
+                        }
+                    }
+                }
+                .links-block{
+
+                    .footer-links{
+                        margin-left: 50px
+                    }
+                }
+            }
+            .bottom-footer{
+                display: none
+            }
+        }
+    }
+    @include mobile{
+        .container{  
+            
+        }
+    }
+}

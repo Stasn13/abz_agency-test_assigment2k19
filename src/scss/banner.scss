@@ -1,0 +1,29 @@
+@import "variables.scss";
+
+#banner{
+    background: url(../images/banner-bg/banner-bg-1204x723.jpg) #0e1a74 center no-repeat;
+    background-size: cover;
+    .container{
+        padding-top: 129px;
+        padding-bottom: 158px;
+        color: white;
+        h1{
+            max-width: 447px;
+            margin-bottom: 23px;
+            margin-left: -1px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 26px;
+            max-width: 425px;
+            margin-bottom: 38px;
+        }
+    }
+    @include tablet{
+        background: url(../images/banner-bg/banner-bg-768x622.jpg) #0e1a74 center no-repeat;
+        background-size: cover;
+        .container{
+            padding: 118px 14px 120px;
+        }
+    }
+}

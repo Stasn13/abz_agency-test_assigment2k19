@@ -1,0 +1,64 @@
+@import "variables.scss";
+
+#users{
+    .container{
+        padding: 131px 49px 150px;
+        h2{
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        h5{
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 57px;
+        }
+        .users-block{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-bottom: 56px;
+            .user-item{
+                display: flex;
+                height: 219px;
+                width: 287px;
+                .user-item-photo{
+                    background: url(../images/icons/cover-icon-user.svg) #000000 center no-repeat;
+                    background-size: contain; 
+                    width: 70px;
+                    height: 70px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    margin-right: 7px;
+                    img{
+                        width: 70px;
+                        height: auto;
+                        border-radius: 50%;
+                    }
+                }
+                .user-item-info{
+                    margin-top: 21px;
+                    h4{
+                        margin-bottom: 15px;
+                        max-width: 205px;
+                    }
+                    .user-info-sub{
+                        color: $sub-texts;
+                        font-size: 13px;
+                        max-width: 205px;
+                        line-height: 15.5px;
+                        div{
+                            margin-bottom: 5px;
+                            &:last-child{
+                                margin: 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}

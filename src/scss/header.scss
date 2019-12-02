@@ -1,0 +1,126 @@
+@import "variables.scss";
+
+#header{
+    height: 64px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255,255,255,.9);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            a{
+                display: block;
+                img{
+                    height: 24px
+                }
+            }
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            li{
+                margin-left: 25px;
+            }
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+        .user-info{
+            display: flex;
+            align-items: center;
+            .user-info-text{
+                text-align: right;
+                .user-name{
+                    font-size: 14px;
+                    margin-bottom: 4px;
+                    text-transform: capitalize;
+                    max-width: 112px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .user-email{
+                    color: $grey;
+                    font-size: 12px;
+                    max-width: 112px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .user-info-photo{
+                margin: 0 14px;
+                .avatar{
+                    display: block;
+                    .avatar-photo{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        background: url(../images/icons/cover-icon-user.svg) #555555 center no-repeat;
+                        background-size: contain; 
+                    }
+                }
+            }
+        }
+        .drawer-btn{
+            display: none
+        }
+    }
+
+    // MEDIA-Queries
+    @include tablet{
+        .container{  
+            padding: 0 15px;
+            .logo{
+                margin-left: 9px
+            }
+            nav{
+                display: none
+            }
+            .user-info{
+                display: none
+            }
+            .drawer-btn{
+                display: block;
+                margin-right: 9px;
+            }
+        }
+    }
+    @include mobile{
+        .container{  
+            nav{
+                display: none
+            }
+            .user-info{
+                display: none
+            }
+            .drawer-btn{
+                display: block
+            }
+        }
+    }
+}
+
+// Styles for Drawer on mobile devices
+
+.MuiDrawer-modal{
+    display: none;
+
+    @include tablet{
+        display: block;
+        .mobile-menu{
+            width: 260px
+        }
+    }
+    @include mobile{
+        display: block;
+        .mobile-menu{
+            width: 250px
+        }
+    }
+}

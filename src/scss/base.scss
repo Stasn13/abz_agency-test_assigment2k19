@@ -1,0 +1,141 @@
+@import "variables.scss";
+
+// BASE TAGS
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: SourceSansPro, sans-serif;
+}
+h1, h2, h3, h4, h5{
+    margin: 0;
+    font-family: Overpass;
+}
+h1{
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 60px
+}
+h2{
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 51px;
+}
+h3{
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 31px;
+}
+h4{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+}
+h5{
+    font-family: SourceSansPro, sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+}
+@include tablet{
+    h1{
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 51px;
+    }
+}
+@include mobile{
+    h1{
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36px;
+    }
+    h2{
+        font-weight: 600;
+        font-size: 26px;
+        line-height: 31px;
+    }
+    h3{
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 26px;
+    }
+    h5{
+        font-family: SourceSansPro, sans-serif;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+p{
+    margin: 0;
+}
+li{
+    list-style: none
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+// BASE ELEMENTS
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 48px;
+    width: 100%
+}
+.cta{
+    font-size: 20px;
+    border-radius: 4px;
+    width: 290px;
+    height: 40px;
+    padding: 0;
+    border: 0;
+    font-weight: bold;
+    outline: 0;
+    transition: .3s;
+    cursor: pointer
+}
+.btn-primary{
+    color: #fefefe;
+    background-color: $primary;
+
+    &:hover{
+        background-color: $primary-hover;
+    }
+}
+.btn-secondary{
+    color: $primary;
+    border-radius: 4px;
+    border: solid 2px $primary;
+    font-weight: 700;
+    background-color: #fff;
+    &:hover{
+        background-color: rgba(255, 131, 31, .2);
+        color: $primary-hover;
+        border: solid 2px $primary-hover;
+        filter: spread(1.4px);
+    }
+}
+.btn-disabled{
+    color: $grey;
+    background-color: #d7d7d7;
+    /* box-shadow: 4.3px 5.5px 7.6px 1.4px #0000001c; */
+}
+.icon{
+    cursor: pointer;
+    svg{
+        &:hover{
+            g{
+                transition: .1s;
+                g{
+                    fill: $icon-hover
+                }
+            }
+        }
+    }
+}
+.tooltip{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

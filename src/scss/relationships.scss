@@ -1,0 +1,67 @@
+@import "variables.scss";
+
+#relationships{
+    .container{
+        h2{
+            padding: 121px 0 49px;
+            margin: 0 auto;
+            max-width: 531px;
+            text-align: center;
+        }
+        .skills-block{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 135px;
+            .skills-item{
+                .skills-text{
+                    p{
+                        margin-top: 13px;
+                        color: $sub-texts;
+                        line-height: 1.38;
+                    }
+                }
+            }   
+            .item-html{
+                .skills-icon{
+                    background: url(../images/html.svg) center no-repeat;
+                    width: 97px;
+                    height: 110px;
+                    margin-bottom: 24px;
+                }
+                .skills-text{
+
+                    p{
+                        max-width: 279px
+                    }
+                }
+            }
+            .item-css{
+                margin-right: 30px;
+                .skills-icon{
+                    background: url(../images/css.svg) center no-repeat;
+                    width: 97px;
+                    height: 110px;
+                    margin-bottom: 24px;
+                }
+                .skills-text{
+                    p{
+                        max-width: 220px
+                    }
+                }
+            }
+            .item-js{
+                .skills-icon{
+                    background: url(../images/javascript.svg) center no-repeat;
+                    width: 100px;
+                    height: 114px;
+                    margin-bottom: 19px;
+                }
+                .skills-text{
+                    p{
+                        max-width: 264px
+                    }
+                }
+            }
+        }
+    }
+}
